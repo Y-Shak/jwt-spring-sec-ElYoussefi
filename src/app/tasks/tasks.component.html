@@ -1,0 +1,26 @@
+<div class="col-lg-6 offset-lg-3">
+
+    
+    <div class="card">
+        <div class="card-header bg-dark">
+          <button class="btn btn-outline-light" (click)="onNewTask()" *ngIf="isAdmin()">New Task</button>
+        </div>
+        <div class="card-body m-3">
+          
+          <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Task Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of tasks">
+                    <td>{{ t.id}}</td>
+                    <td>{{ t.taskName}}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+      </div>
+</div>
